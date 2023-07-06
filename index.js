@@ -18,7 +18,7 @@ io.on("connection",(socket)=>{
         console.log(msg);
         io.to("room").emit("sendmsgserver",{...msg,type:"othermsg"})
     })
-})
+});
 
 httpserver.listen(3000,()=>{
     console.log("port connected");
